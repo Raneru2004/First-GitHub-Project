@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <div class="entire__border">
 <body>
@@ -27,18 +29,46 @@
                     <li><a class="nav__link" href="">Contact Us</a></li>
                     <li><a class="nav__link" href="">Login</a></li>
                     <li><a class="nav__link--primary" href="">Sign Up</a></li>
-                </ul>  
+                </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">About</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Blog</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Pricing</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Contact Us</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()">Login</a>
+                    </li>
+                    <li class="menu__list">
+                        <a class="menu__link--primary no-cursor nav__link--primary new__color" onclick="closeMenu()">Sign Up</a>
+                    </li>
+                </ul> 
+                </div> 
 
                </div>
             </nav>
         </div>
     </section>
     <main>
-        <section>
+        <section id="main">
         <div class="row">
             <div class="main__area">
             <div class="main__text">
-                <h1>Beautiful React Templates <span class="purple">for you.</span></h1>
+                <h1 class="main__text--heading">Beautiful React Templates <span class="purple">for you.</span></h1>
                 <div class="main__text--para">
                     <p>Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
                 </div>
@@ -244,6 +274,8 @@
                 <div class="plans">
                     <div class="plan">
                         <div class="one_plan">
+                            <div class="top__border top__border--color">
+                            </div>
                             <div class="titles">
                                 <h2 class="pricing_title">
                                     PERSONAL
@@ -265,17 +297,156 @@
                                 <p class="detail">Basic Assistance</p>
                             </div>
                             <div class="buy__button">
-                                <button class="buy">
-                                    Buy Now
-                                </button>
+                                <button class="buy">BUY NOW</button>
                             </div>
                         </div>
                     </div>
+                    <div class="plan">
+                        <div class="business__one_plan">
+                            <div class="top__border business__top__border--color">
+                            </div>
+                            <div class="titles new__color">
+                                <h2 class="pricing_title">
+                                    BUSINESS
+                                </h2>
+                                <h1 class="pricing_number">
+                                    $37.99
+                                </h1>
+                                <h3 class="date new__color">
+                                    MONTHLY
+                                </h3>
+                            </div>
+                            <div class="plan__details new__color color">
+                                <h3 class="plan_details--user">
+                                    For Small Businesses
+                                </h3>
+                                <p class="detail new__color">60 Templates</p>
+                                <p class="detail new__color">15 Landing Pages</p>
+                                <p class="detail new__color">22 Internal Pages</p>
+                                <p class="detail new__color">Priority Assistance</p>
+                            </div>
+                            <div class="buy__button color">
+                                <button class="business__buy">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan">
+                        <div class="one_plan">
+                            <div class="top__border enterprise__top__border--color">
+                            </div>
+                            <div class="titles">
+                                <h2 class="pricing_title">
+                                    ENTERPRISE
+                                </h2>
+                                <h1 class="pricing_number">
+                                    $57.99
+                                </h1>
+                                <h3 class="date">
+                                    MONTHLY
+                                </h3>
+                            </div>
+                            <div class="plan__details ">
+                                <h3 class="plan_details--user">
+                                    For Large Companies
+                                </h3>
+                                <p class="detail">90 Templates</p>
+                                <p class="detail">27 Landing Pages</p>
+                                <p class="detail">32 Internal Pages</p>
+                                <p class="detail">Personal Assistance</p>
+                            </div>
+                            <div class="buy__button">
+                                <button class="enterprise__buy">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-    </main>
-    
+    </main>        
 </body>
 </div>
+<footer>
+    <div class="footer__details">
+    <div class="row">
+        <div class="links">
+            <div class="link new__color">
+                <div class="link__details">
+                <h4 class="link__heading">MAIN</h4>
+                <p class="link__detail new__color">Blog</p>
+                <p class="link__detail new__color">FAQs</p>
+                <p class="link__detail new__color">Support</p>
+                <p class="link__detail new__color">About Us</p>
+                </div>
+            </div>
+            <div class="link new__color">
+                <div class="link__details">
+                <h4 class="link__heading">PRODUCT</h4>
+                <p class="link__detail new__color">Log In</p>
+                <p class="link__detail new__color">Personal</p>
+                <p class="link__detail new__color">Business</p>
+                <p class="link__detail new__color">Team</p>
+                </div>
+            </div>
+            <div class="link new__color">
+                <div class="link__details">
+                <h4 class="link__heading">PRESS</h4>
+                <p class="link__detail new__color">Logos</p>
+                <p class="link__detail new__color">Events</p>
+                <p class="link__detail new__color">Stories</p>
+                <p class="link__detail new__color">Office</p>
+                </div>
+            </div>
+            <div class="link new__color">
+                <div class="link__details">
+                <h4 class="link__heading">TEAM</h4>
+                <p class="link__detail new__color">Career</p>
+                <p class="link__detail new__color">Founders</p>
+                <p class="link__detail new__color">Culture</p>
+                <p class="link__detail new__color">Onboarding</p>
+                </div>
+            </div>
+            <div class="link new__color">
+                <div class="link__details">
+                <h4 class="link__heading">LEGAL</h4>
+                <p class="link__detail new__color">GDPR</p>
+                <p class="link__detail new__color">Privacy Policy</p>
+                <p class="link__detail new__color">Terms of Service</p>
+                <p class="link__detail new__color">Disclaimer</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__border">
+        <div class="footer__info">
+            <div class="footer__name__logo">
+            <figure class="footer__img--wrapper">
+                <img src="./logo-light.svg" alt="" class="footer__img">
+                
+            </figure>
+            <h3 class="footer__name">Treact Inc.</h3>
+            </div>
+            <p class="footer__text">&copy; 2018 Treact Inc. All Rights Reserved</p>
+            <div class="social__links">
+                <div class="link__container">
+                <a href="https://facebook.com" class="social__link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                </div>
+                <div class="link__container">
+                <a href="https://twitter.com" class="social__link">
+                    <i class="fab fa-github"></i>
+                </a>
+                </div>
+                <div class="link__container">
+                <a href="https://youtube.com" class="social__link">
+                    <i class="far fa-envelope"></i>
+                </a>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
 </html>
