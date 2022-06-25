@@ -40,7 +40,7 @@ header{
 }
 .purple{
     color: #7342d6;
-    padding-left: 2px;
+
 }
 h1{
     font-size: 48px;
@@ -115,7 +115,7 @@ NAVIGATION
     border: none;
     font-size:40px;
     text-align: center;
-    color: #7342d6;
+    color: #000000;
     display: none;
 }
 .btn__menu:hover {
@@ -202,6 +202,11 @@ MAIN BODY
     width: 40%;
     display: flex;
     flex-direction: column;
+    padding-right: 32px;
+}
+.main__text--para{
+    padding: 16px 0;
+    text-align: center;
 }
 .main__pic{
     width: 60% ;
@@ -210,7 +215,6 @@ MAIN BODY
 .main__pic--img{
     max-width: 1200px;
     width: 100%;
-    padding-left: 28px;
 }
 
 
@@ -240,12 +244,11 @@ MAIN BODY
     filter: brightness(2.3);
 }
 .button__input{
-    width: 83%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 0;   
+      
 }
 .btn{
     position: absolute;
@@ -262,6 +265,7 @@ MAIN BODY
     font-size: 16px;
     font-weight: 700;
     transition: all 300ms ease;
+    transform: translateY(-5px);
 }
 
 .mail__input{
@@ -269,8 +273,9 @@ MAIN BODY
     padding: 0px;
     width: 100%;
     border-radius: 999px;
-    padding: 16px;
+    padding: 16px 0;
     border-color: rgb(185, 185, 185);
+    padding: 16px;
     transition: all 300ms ease;
 }
 .btn:hover  {
@@ -344,6 +349,11 @@ FEATURES
     width:100%;
     text-align: center;
     padding: 24px 0;
+    
+}
+.feature__text--para{
+    max-width: 500px;
+
 }
 /*
 
@@ -353,13 +363,14 @@ QUALITY WORK
 .quality{
     width: 100%;
     display: flex;
-    padding: 24px;
+    padding: 48px 0;
+    
 }
 .text_side{
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-right: 38px;
+    padding-right: 32px;
 }
 .quality__main--heading{
     padding-top: 16px;
@@ -388,6 +399,8 @@ QUALITY WORK
 }
 .quality__img--wrapper{
     width: 50%;
+    display: flex;
+    align-items: center;
     
 }
 .quality__img{
@@ -408,7 +421,7 @@ STEPS
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 136px 36px;
+    padding: 68px 0;
 
 }
 .steps__img--wrapper{
@@ -425,10 +438,9 @@ STEPS
     width:50%;
     display: flex;
     flex-direction: column;
+    padding-left: 32px;
 }
-.steps__start{
-    margin-left: 64px;
-}
+
 .steps_heading{
     font-size: 18px;
 }
@@ -484,8 +496,10 @@ PLANS
     width: calc(100%/3);
     display: flex;
     flex-direction: column;
-    padding-top: 36px;
-    padding-right: 36px;
+    padding:24px 0;    
+}
+.plan:not(:last-child){
+    padding-right: 28px;
 }
 .one_plan{
     width: 100%;
@@ -669,6 +683,10 @@ footer{
 }
 .footer__text{
     color: aliceblue;
+ 
+}
+.footer__text--container{
+    padding: 24px 0;
 }
 .footer__name{
     color: aliceblue;
@@ -717,15 +735,23 @@ footer{
     .feature{
         width:50%;
     }
+    .plans{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .plan{
         width:100%;
-        margin: 0 154px;
+        margin: 0 100px;
+        min-width: 350px;
+        max-width: 470px;
     }
     .main__area{
         display:block;
     }
     .main__text{
-        width: 100%;;
+        width: 100%;
     }
     .main__pic{
         width:100%;
@@ -736,7 +762,7 @@ footer{
         align-items: center;
     }
     .main__area{
-        padding: 100px;
+        padding: 24px;
     }
     .main__text--heading{
         text-align: center;
@@ -749,10 +775,16 @@ footer{
     .main__text--para{
         text-align: center;
     }
-    .mail__input,
-    .btn{
-        margin: 16px 50px;
+    .mail__input{
+        width: 370px;
     }
+    .customer__text{
+       text-align: center;
+    }
+    .big__heading{
+        text-align: center;
+    }
+    
 }
 @media (max-width:768px){
     .links{
@@ -761,8 +793,17 @@ footer{
     .link{
         width: calc(100%/3);
     }
+
+        
     .feature{
         width: 100%;
+        max-width: 350px;
+    }
+    .features{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     
     .steps{
@@ -781,6 +822,7 @@ footer{
     }
     .quality__img--wrapper{
         width: 100%;
+        padding-bottom:48px ;
     }
     .text_side{
         width:100%;    
@@ -792,5 +834,108 @@ footer{
     .heading__text--para{
         margin: 0 24px;
     }
+    .features__subtitle{
+        text-align: center;
+    }
+    .quality__main--heading{
+        text-align: center;
+    }
+    .quality_heading{
+        text-align: center;
+    }
+    .quality__text{
+        text-align: center;
+    }
+    .btn--new--wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .steps__img--wrapper{
+        padding-bottom: 54px;
+    }
+    .steps_heading{
+        text-align: center;
+    }
+    .easy__to__start{
+        text-align: center;
+    }
+    .step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .step__instruction,
+    .step__heading{
+        text-align: center;
+        width: 350px;
+    }
+    .plans{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .plan{
+        width:100%;
+        max-width: 470px;
+        min-width: 350px;
+    }
+    .footer__text{
+        padding: 24px 0;
+    }
 
+}
+@media (max-width:640px){
+    .main__text{
+        width:100%;
+
+    }
+    .button__input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn__container{
+        width: 100%;
+        padding: 14px 0;
+    }
+  
+    .btn{
+        position: relative;
+        width: 100%;
+        right: -5px;
+            
+    }
+    .feature{
+        display: flex;
+        
+    }
+    .links{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 36px;
+    }
+    .link{
+        display: flex;
+        flex-direction: column;
+        width: calc(100%/5);
+        align-items: center;
+    }
+    .link__detail{
+        font-size: 10px;
+        text-align: center;
+    }
+    .link__heading{
+        text-align: center;
+        font-size: 12px;
+    }
+    .main__pic{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
