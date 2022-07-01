@@ -1,69 +1,29 @@
-//template_1pse6zk
-//service_6a98dga
-// PKdrIrPN08oYYLVNq
+// API 1: "https://jsonplaceholder.typicode.com/users"
+// API 2: "https://jsonplaceholder.typicode.com/posts?userId=:id"
+const userListEl = document.querySelector(".user-list")
+async function main() {
+    const users = await fetch("https://jsonplaceholder.typicode.com/users");
+    const usersData = await users.json();
+    console.log(usersData);
+    userListEl.innerHTML= usersData.map((user) => userHTML(user)).join("");  //using .map and this html snippet you convert the data to html in given below form
+        
+};
 
-const scaleFactor = 1/20
+main();
 
-function moveBackground(event) {
-  const shapes= document.querySelectorAll(".shape");
-  const x =event.clientX * scaleFactor;
-  const y =event.clientY * scaleFactor;
+function showUserPosts(id) {
+    localStorage.setItem("id", id) //use this to route to a website and store posts it's like permenant, the "id" name doesn't matter
+    window.location.href = `${window.location.origin}/user.html` //routing to a new website
 
-  for( let i =0; i< shapes.length; ++i) {
-    const isOdd= i % 2 !==0;
-    const boolInt= isOdd ? -1 : 1; // if it's odd we'll make it negative and if it's even we'll make it positive
-    shapes[i].style.transform= `translate(${x * boolInt}px,${y * boolInt}px)`
-  }
-}
+};
 
-
-
-let contrastToggle = false;
-
-function toggleContrast() {
-  contrastToggle = !contrastToggle;
-  if (contrastToggle) {
-    document.body.classList += " dark-theme"
-  }
-  else {
-    document.body.classList.remove("dark-theme")
-  }
-}
-
-
-function contact(event) {
-    event.preventDefault();
-    const loading = document.querySelector(".modal__overlay--loading");
-    const success = document.querySelector(".modal__overlay--success");
-    loading.classList += " modal__overlay--visible";
-    emailjs
-      .sendForm(
-        "service_6a98dga",
-        "template_1pse6zk",
-        event.target,
-        "PKdrIrPN08oYYLVNq"
-      )
-      .then(() => {
-        loading.classList.remove("modal__overlay--visible");
-        success.classList += " modal__overlay--visible";
-      })
-      .catch(() => {
-        loading.classList.remove("modal__overlay--visible");
-        alert(
-          "The email service is temporarily unavailable. Please contact me directly on email@email.com"
-        );
-      });
-  }
-
-  let isModalOpen=false;
-
-  function toggleModal(){
-    
-    if (isModalOpen) {
-        isModalOpen=false;
-        return document.body.classList.remove("modal__open")
-    }
-    isModalOpen=true;
-    document.body.classList +=" modal__open"
-
-  }
+function userHTML(user) {
+    return `<div class="user-card" onclick="showUserPosts(${user.id})">  
+    <div class="user-card__container">
+        <h3>${user.name}</h4>
+        <p><b>Email:</b> ${user.email}</p>
+        <p><b>Phone:</b> ${user.phone}</p>
+        <p><b>Website:</b> <a href="https://${user.website}" target="_blank">${user.website}</a></p>
+    </div>
+</div>`;
+};
