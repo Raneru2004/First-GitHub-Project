@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <title>User Posts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <script defer src="findyourmovie.js"></script>
+
+
 </head>
-
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="user-list">
-        <div class="user">
-          <div class="user-card">
-            <div class="user-card__container">
-              <h3>User's Name</h4>
-                <p><b>Email:</b> email@email.com</p>
-                <p><b>Phone:</b> 0000000000</p>
-                <p><b>Website:</b> <a href="https://website.website" target="_blank">website.website</a></p>
+    <section id="landing__page">
+        <nav>
+            <div class="nav__container">
+                <figure class="nav__img--container">
+                    <img src="./assets/blinker-icon.png" alt="" class="nav__img">
+                </figure>
+                
+                    <ul class="nav__links">
+                        <li><a href="./index.html" class="nav__link link__hover-effect link__hover-effect--purple"><span class="purple">Home</span></a></li>
+                        <li><a href="./findyourmovie.html" class="nav__link link__hover-effect link__hover-effect--black">Find your Movie</a></li>
+                        <li><a href="#" class="nav__link nav__link--primary">Contact</a></li>
+                    </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-<script src="index.js"></script>
+        </nav>
+    </section>
+    <main>
+        <section id="main__page">
+            <div class="content__wrapper">
+                <div class="heading__wrapper">
+                <h1 class="purple">Australia's most awarded
+                    <br>
+                    movie subscription platform
+                </h1>
+                </div>
+                <div class="sub-heading__wrapper">
+                    <h2>FIND THE PERFECT MOVIE WITH <span class="purple">BLINKER</span></h2>
+                </div>
+                <div class="search_bar--container" >
+                    <input class="search-bar" type="text"  placeholder="Search by Model, Make or Keyword" onchange="onChange(event)">
+                    <div class="searching">
+                    <button  class="search" onclick="window.location.href='http://127.0.0.1:5500/findyourmovie.html';"><i class="fas fa-search"></i><i class="fas fa-spinner"></i></a></button>
+                    </div>
+                </div>
+                <figure class="main__img--wrapper">
+                    <img src="./assets/building.png" alt="" class="main__img">
+                </figure>
 
+            </div>
+
+        </section>
+    </main>
+    
+</body>
 </html>
