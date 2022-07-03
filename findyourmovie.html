@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Find your movie</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script defer src="findyourmovie.js"></script>
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <section id="navigation__bar">
+        <nav>
+                <div class="nav__container">
+                    
+                    <figure class="nav__img--container">
+                        <img src="./assets/blinker-icon.png" alt="" class="nav__img">
+                    </figure>
+                        <ul class="nav__links">
+                            <li><a href="./index.html" class="nav__link new-nav__link link__hover-effect link__hover-effect--white">Home</a></li>
+                            <li><a href="./findyourmovie.html" class="nav__link new-nav__link link__hover-effect link__hover-effect--white">Find your Movie</a></li>
+                            <li><a href="#" class="nav__link new-nav__link nav__link--primary">Contact</a></li>
+                        </ul>
+                </div>
+            </div>
+            
+            <div class="nav__search">
+                <h1 class="nav__search--heading">Browse our movies</h1>
+                <form class="search-bar new__search-bar">
+                  <input onkeyup="if(event.keyCode===13){submit.click()}" id="word" class="search-bar__new" placeholder="Search by Model, Make or Keyword"   onchange="onSearchChange(event)"></input>
+                  <button id="submit" class="movie__search"  ><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+            
+        </nav>
+        <div class="bg__filter">
+        <figure class="nav__bg-img">
+            <img src="./assets/movie-nav.jpg" alt="" class="nav__bg">
+        </figure>
+        </div>
+    </section>
+    <main id="movies__main">
+        <section>
+            
+            <div class="container">
+                <div class="row">
+                  <div class="movies__header">
+                    <h2> 
+                      Search results:
+                    </h2>
+                  <select name="" id="filter" onchange="filterMovies(event)">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="Year_Asc">Year (Ascending)</option>
+                    <option value="Year_Desc">Year (Descending)</option>
+                  </select>
+
+                  </div>
+                  <div class="movies movies__loading">
+                    <i class="fas fa-spinner movies__loading--spinner"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="movie-list">
+                    <div class="movie">
+                      <div class=" movie-card"> 
+                        <div class="movie-card__container">
+                          <figure class="car__img--container">
+                            <img src="" alt="" class="car__img">
+                          </figure>  
+                          <h3 class="purple">Movie's Name</h3>
+                            <p>Type: type</p>
+                            <p>Year: year</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <figure class="no-results no-results__img--container">
+                <img src="./assets/noresults.png" alt="" class="no-results__done no-results__img">
+              </figure>
+        </section>
+        
+    </main>
+    
+</body>
+</html>
+
