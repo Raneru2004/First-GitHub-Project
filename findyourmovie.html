@@ -7,7 +7,8 @@
     <title>Find your movie</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    <script defer src="findyourmovie.js"></script>
+    <script defer src="findyourmovie.js">
+    </script>
     <script defer src="index.js"></script>
 
 </head>
@@ -29,10 +30,10 @@
             
             <div class="nav__search">
                 <h1 class="nav__search--heading">Browse our movies</h1>
-                <form class="search-bar new__search-bar">
+                <div class="search-bar new__search-bar">
                   <input onkeyup="if(event.keyCode===13){submit.click()}" id="word" class="search-bar__new" placeholder="Search by Model, Make or Keyword"   onchange="onSearchChange(event)"></input>
                   <button id="submit" class="movie__search"  ><i class="fas fa-search"></i></button>
-              </form>
+              </div>
             </div>
             
         </nav>
@@ -66,16 +67,16 @@
               <div class="container">
                 <div class="row">
                   <div class="movie-list">
-                    <div class="movie">
-                      <div class=" movie-card"> 
+                    <div class="movie movie__info">
+                      <div class="visible movie-card">
                         <div class="movie-card__container">
                           <figure class="car__img--container">
                             <img src="" alt="" class="car__img">
                           </figure>  
                           <h3 class="purple">Movie's Name</h3>
                             <p>Type: type</p>
-                            <p>Year: year</p>
-                        </div>
+                            <p>Year: year</p> 
+                        </div>                          
                       </div>
                     </div>
                   </div>
