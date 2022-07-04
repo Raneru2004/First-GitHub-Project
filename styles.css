@@ -17,6 +17,8 @@ body {
     background-color: #e9e9e9;
 }
 
+
+
 li {
     list-style-type: none;
 }
@@ -24,6 +26,18 @@ li {
 ul{
     display: flex;
 }
+
+p {
+    line-height: 1.5;
+    font-size: 14px;
+
+}
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .purple{
     color: #6030b1;
 }
@@ -360,6 +374,11 @@ select {
     width:25%;
 }
 
+.movie__info{
+    display: flex; 
+    flex-wrap: wrap;
+}
+
 
 .movie-card {
     background-color: #fff;
@@ -372,22 +391,19 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
-     
+    transition: all 300ms ease;
+    height: 400px; 
 
 }
-.visible{
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding:10px;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 25%;
-    margin: 16px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.movie-card{
+    display: block !important;
 }
+
+.movie__info .movie-card{
+    display: none !important;
+}
+
+
 
 
 .movie-card:hover {
@@ -395,14 +411,23 @@ select {
 }
 
 .car__img--container{
-    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .car__img{
     width:100%;
     padding: 16px 0;
+    height: 300px;
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+
+    
 }
 
-.car__img:hover {
+.movie-card:hover .car__img {
     opacity: 0.8;
 }
 .no-results__img--container{
@@ -417,6 +442,8 @@ select {
     align-items: center;
     justify-content: center;
     max-width:500px;
+    transform: translateY(-40px);
+    position: absolute;
 }
 
 .no-results{
@@ -464,9 +491,7 @@ select {
 
 /* 
 1. have the spinner, only spin when the movies are loading
-2. make sure when you press enter, the search results word is displayed
 3. Have the image only show up when the results are absent
-4. create the filter function for year
 5. allow only 6 posts at once
 */
 
