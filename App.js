@@ -1,21 +1,36 @@
-import './App.css';
 import React from 'react';
-import Home from './pages/Home';
+import './App.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SearchPage from './pages/SearchPage';
-import ImagesPage from './pages/ImagesPage';
+import Mail from './components/Mail';
+import EmailList from './components/EmailList';
+import SendMail from './components/SendMail';
+import { useSelector } from 'react-redux/es/exports';
+import { selectSendMessageIsOpen } from './features/counter/mailSlice'
+
 
 function App() {
+  const sendMessageIsOpen= useSelector(selectSendMessageIsOpen)
+  console.log(sendMessageIsOpen)
   return (
-    <div className="app">
-      <Router>
-        <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/search" element={<SearchPage />}/>
-        <Route path="/images" element={<ImagesPage />}/>
-        </Routes>
-        </Router>      
+    
+   
+    <div className="App">
+      <Header />
+      <div className='app__body'>
+        <Sidebar/>
+          <Router>
+            <Routes>
+              <Route path="/mail" element={<Mail/>}/>
+              <Route path="/" element={<EmailList/>}/>
+            </Routes>
+          </Router>
+      </div>
+      {sendMessageIsOpen && < SendMail/>}
     </div>
+    
+    
   );
 }
 
