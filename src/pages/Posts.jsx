@@ -7,7 +7,7 @@ const Posts = () => {
     let navigate=useNavigate();
     const {id}= useParams();
     const [posts, setPosts] =useState([]);
-    const [loading, setLoading] =useState();
+    const [loading, setLoading] =useState(true);
     const [searchId, setSearchId]=useState(id);
     function onSearch(){
         fetchPosts(searchId)
@@ -16,12 +16,14 @@ const Posts = () => {
 
     async function fetchPosts(userId){
         setLoading(true)
+        //console.log(loading)
         // const data = await fetch("https://jsonplaceholder.typicode.com/posts/1");
         // const data2 = await data.json()
          const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId || id}`); // {data } is same as response.data
          setPosts(data);
          console.log(data)
          setLoading(false)
+         console.log(loading)
 
     }
 

@@ -1,18 +1,17 @@
-import './App.css';
-import Sidebar from './components/Sidebar';
-import React from 'react';
-import Feed from './components/Feed';
-import Widgets from './components/Widgets';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Posts from './pages/Posts';
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <Sidebar/>
-
-      <Feed/>
-
-      <Widgets/>
+     <Routes>
+      <Route path="/" element={<Home/>}></Route>
+      <Route path=":id" element={<Posts/>}></Route>
+     </Routes>
     </div>
+    </Router>
   );
 }
 
