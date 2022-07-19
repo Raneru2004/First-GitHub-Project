@@ -1,5 +1,8 @@
 .widgets{
-    flex:0.3;
+    position: fixed;
+    width:30%;
+    max-width: 300px;
+    margin-left: 720px;
 }
 .widgets__input{
     display: flex;
@@ -9,10 +12,12 @@
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
+    width: 106%;
 }
 .widgets__input > input {
     border: none;
     background-color: #e6ecf0;
+    width: 100%;
 }
 .widgets__searchIcon{
     color: gray;
@@ -23,9 +28,17 @@
     padding: 20px;
     background-color: #f5f8fa;
     border-radius: 20px;
+    width:100%;
 }
-
+.tweet__widget{
+    width:100%;
+}
 .widgets__widgetContainer > h2 {
     font-size: 18px;
     font-weight: 800;
+}
+@media(max-width:1020px){
+    .widgets{
+        display: none;
+    }
 }

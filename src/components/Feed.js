@@ -6,6 +6,7 @@ import db from '../firebase';
 import { collection, addDoc, getDocs, doc, getDoc, query, where, updateDoc, deleteDoc } from "firebase/firestore";
 import axios from 'axios';
 import FlipMove from 'react-flip-move';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 
 function Feed() {
@@ -35,22 +36,25 @@ function Feed() {
         <div className='feed'>
             <div className='feed__header'>
                 <h1>Home</h1>
+                <AutoAwesomeIcon/>
             </div>
-            <TweetBox/>
+            <div className='feed__body'>
+                <TweetBox/>
 
-            <FlipMove>
-            {posts.map(post => (
-                <Post 
-                key={post.text}
-                displayName={post.displayName}
-                username={post.username} 
-                verified = {post.verified}
-                text={post.text}
-                avatar={post.avatar}
-                image ={post.image}
-                />
-            ))}
-            </FlipMove>
+                <FlipMove>
+                {posts.map(post => (
+                    <Post 
+                    key={post.text}
+                    displayName={post.displayName}
+                    username={post.username} 
+                    verified = {post.verified}
+                    text={post.text}
+                    avatar={post.avatar}
+                    image ={post.image}
+                    />
+                ))}
+                </FlipMove>
+            </div>
             
         </div>
     );

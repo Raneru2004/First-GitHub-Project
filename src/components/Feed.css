@@ -1,10 +1,14 @@
 .feed{
-    flex:0.4;
+    margin-left: 299px;
+    width: 600px;
     border-right: 1px solid #e6ecf0;
-    min-width: fit-content;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    
+}
+.feed__body{
+    margin-top: 80px;
 }
 
 .feed::-webkit-scrollbar{
@@ -12,12 +16,18 @@
 }
 
 .feed__header{
-    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 559px;
     top:0;
     z-index: 100;
     background-color: white;
     border: 1px solid #e6ecf0;
     padding: 15px 20px;
+    opacity: 0.96;
+    
 }
 .feed__header > h2 {
     font-size: 20px;
@@ -27,4 +37,10 @@
     font-weight: 600;
     font-size: 12px;
     color: gray;
+}
+@media(max-width:560px){
+    .feed{
+        flex:1;
+        width:100%;
+    }
 }

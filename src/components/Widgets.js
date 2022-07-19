@@ -14,8 +14,9 @@ const Widgets = () => {
             </div>
             <div className='widgets__widgetContainer'>
                 <h2>What's happening</h2>
-
-                <TwitterTweetEmbed tweetId={"858551177860055040"}/>
+                <div className="tweet__widget">
+                <TwitterTweetEmbed tweetId={"858551177860055040"} />
+                </div>
                 <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="cleverqazi"
