@@ -1,41 +1,71 @@
+
 .widgets{
     position: fixed;
-    width:30%;
-    max-width: 300px;
-    margin-left: 720px;
+    width: 355px;
+    margin-left: 950px;
+    height: 100%;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    
+    
+}
+.widgets::-webkit-scrollbar{
+    display: none;
+}
+.widgets__input--wrapper{
+    position: fixed;
+    width: 350px;
+    padding:44px 0px;
+    background-color: white;
+    margin-left: 18px;
+   
 }
 .widgets__input{
     display: flex;
     align-items: center;
-    background-color:#e6ecf0 ;
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 20px;
-    width: 106%;
+    justify-content: space-between;
+    position: fixed;
+    width: 305px;
+    top:15px;
+    z-index: 100;
+    background-color: #e6ecf0;
+    border-radius: 30px;
+    padding: 15px 20px;
+   
+    
 }
 .widgets__input > input {
     border: none;
     background-color: #e6ecf0;
     width: 100%;
+    z-index: 10000;
 }
 .widgets__searchIcon{
     color: gray;
 }
 .widgets__widgetContainer{
-    margin-top: 15px;
+    margin-top: 100px;
     margin-left: 20px;
-    padding: 20px;
+    padding:20px 20px;
     background-color: #f5f8fa;
-    border-radius: 20px;
-    width:100%;
+    border-radius: 20px; 
+   
 }
 .tweet__widget{
     width:100%;
 }
+.share__button{
+    margin-top: 12px;
+}
 .widgets__widgetContainer > h2 {
     font-size: 18px;
     font-weight: 800;
+}
+@media(max-width:1300px){
+    .widgets{
+        margin-left: 820px;
+    }
 }
 @media(max-width:1020px){
     .widgets{

@@ -33,29 +33,31 @@ function Feed() {
     // },[])
     
     return (
-        <div className='feed'>
+        <div className='feed__wrapper' >
             <div className='feed__header'>
-                <h1>Home</h1>
-                <AutoAwesomeIcon/>
+                    <h1>Home</h1>
+                    <AutoAwesomeIcon/>
             </div>
-            <div className='feed__body'>
-                <TweetBox/>
+            <div className='feed'>
+                <div className='feed__body'>
+                    <TweetBox/>
 
-                <FlipMove>
-                {posts.map(post => (
-                    <Post 
-                    key={post.text}
-                    displayName={post.displayName}
-                    username={post.username} 
-                    verified = {post.verified}
-                    text={post.text}
-                    avatar={post.avatar}
-                    image ={post.image}
-                    />
-                ))}
-                </FlipMove>
+                    <FlipMove>
+                    {posts.map(post => (
+                        <Post 
+                        key={post.text}
+                        displayName={post.displayName}
+                        username={post.username} 
+                        verified = {post.verified}
+                        text={post.text}
+                        avatar={post.avatar}
+                        image ={post.image}
+                        />
+                    ))}
+                    </FlipMove>
+                </div>
+                
             </div>
-            
         </div>
     );
 }

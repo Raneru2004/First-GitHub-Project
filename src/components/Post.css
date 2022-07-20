@@ -20,7 +20,7 @@
 
 .post__body> img {
     border-radius: 20px;
-    width: 100%;
+    width: 500px;
 
 }
 
@@ -35,4 +35,9 @@
 }
 .post__avatar{
     padding: 20px;
+}
+@media(max-width:560px){
+    .post__body> img{
+        width:100%;
+    }
 }

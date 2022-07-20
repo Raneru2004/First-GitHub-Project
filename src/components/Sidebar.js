@@ -12,6 +12,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { Avatar } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 
 function Sidebar(){
@@ -20,8 +21,8 @@ function Sidebar(){
             <div className='sidebar'>
                 <TwitterIcon className='sidebar__twitterIcon'/>
                 <SidebarOption active Icon={HomeIcon} text="Home"/>
-                <SidebarOption Icon={SearchIcon} text="Explore"/>
-                <SidebarOption Icon={TagIcon} text="Notifications"/>
+                <SidebarOption Icon={TagIcon} text="Explore"/>
+                <SidebarOption Icon={NotificationsIcon} text="Notifications"/>
                 <SidebarOption Icon={MailOutlineIcon} text="Messages"/>
                 <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks"/>
                 <SidebarOption Icon={ListAltIcon} text="Lists"/>

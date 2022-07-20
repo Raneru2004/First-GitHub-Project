@@ -1,6 +1,5 @@
 .sidebar__wrapper{
     height: 100vh;
-    border-right: 1px solid #e6ecf0;
     width:20%;
     position: sticky;
     margin-top: 20px;
@@ -10,6 +9,7 @@
     justify-content: space-between;
     position: fixed;
     z-index: 2;
+    
    
 
 }
@@ -83,8 +83,9 @@
         
     }
     .sidebar__wrapper{
-        width:65px;
+        width:150px;
         align-items: center;
+        margin-left: 44px;
     }
     .sidebar__tweet{
         display: none !important;
@@ -98,7 +99,7 @@
     }
 }
 @media(max-width:560px){
-    .sidebar{
+    .sidebar__wrapper{
         display: none;
     }
 }
