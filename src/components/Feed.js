@@ -7,6 +7,14 @@ import { collection, addDoc, getDocs, doc, getDoc, query, where, updateDoc, dele
 import axios from 'axios';
 import FlipMove from 'react-flip-move';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { Button } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import MicNoneIcon from '@mui/icons-material/MicNone';
+
 
 
 function Feed() {
@@ -34,13 +42,16 @@ function Feed() {
     
     return (
         <div className='feed__wrapper' >
-            <div className='feed__header'>
-                    <h1>Home</h1>
-                    <AutoAwesomeIcon/>
-            </div>
+            <Button className='tweet--plus'><AddIcon/></Button>
             <div className='feed'>
+                
+                <div className='feed__header'>
+                        <h1>Home</h1>
+                        <AutoAwesomeIcon/>
+                </div>
                 <div className='feed__body'>
                     <TweetBox/>
+                    
 
                     <FlipMove>
                     {posts.map(post => (
@@ -55,9 +66,28 @@ function Feed() {
                         />
                     ))}
                     </FlipMove>
+                      
+                </div>
+                <div className='menuBar--wrapper'>
+                    <div className='menuItem--wrapper'>
+                         <HomeIcon/>
+                    </div>
+                    <div className='menuItem--wrapper'>
+                         <SearchIcon/>
+                    </div>
+                    <div className='menuItem--wrapper'>
+                         <MicNoneIcon/>
+                    </div>
+                    <div className='menuItem--wrapper'>
+                         <NotificationsIcon/>
+                    </div>
+                    <div className='menuItem--wrapper'>
+                         <MailOutlineIcon/>
+                    </div>
                 </div>
                 
             </div>
+           
         </div>
     );
 }

@@ -47,8 +47,9 @@ const TweetBox = () => {
                 className='tweetBox__inputImage' 
                 placeholder="Optional: Enter image URL" type="text"/>
 
-
+               
                 <Button onClick={sendTweet} type="submit" className='tweetBox__tweet--button'>Tweet</Button>
+                
             </form>
         </div>
     );
