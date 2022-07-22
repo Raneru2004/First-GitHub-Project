@@ -11,16 +11,31 @@ const TweetBox = () => {
    
     const sendTweet = event => {
         event.preventDefault();
-        const post={
-            displayName:"Raneru",
-            username:'bigran04',
-            verified:false,
-            text:tweetMessage,
-            image:tweetImage,
-            avatar:"https://comicvine.gamespot.com/a/uploads/original/11141/111413459/7333504-8500084638-190Su.jpg"
-          };
+        if (!tweetImage){
+            const post={
+                displayName:"Raneru",
+                username:'bigran04',
+                verified:false,
+                text:tweetMessage,
+                avatar:"https://comicvine.gamespot.com/a/uploads/original/11141/111413459/7333504-8500084638-190Su.jpg"
+              };
+              addDoc(collection(db, "posts"), post);
+
+        } else {
+            setTweetImage("")
+            const post={
+                displayName:"Raneru",
+                username:'bigran04',
+                verified:false,
+                text:tweetMessage,
+                image:tweetImage,
+                avatar:"https://comicvine.gamespot.com/a/uploads/original/11141/111413459/7333504-8500084638-190Su.jpg"
+              };
+            addDoc(collection(db, "posts"), post);  
+        }
         
-        addDoc(collection(db, "posts"), post);
+        
+        
         
         setTweetImage("");
         setTweetMessage("");
@@ -33,7 +48,8 @@ const TweetBox = () => {
         <div className='tweetBox'>
             <form>
                 <div className='tweetBox__input'>
-                  <Avatar src="https://comicvine.gamespot.com/a/uploads/original/11141/111413459/7333504-8500084638-190Su.jpg"/>
+                  <Avatar src="https://comicvine.gamespot.com/a/uploads/original/11141/111413459/7333504-8500084638-190Su.jpg"
+                  />
                   <input value={tweetMessage} 
                   onChange={event=>setTweetMessage(event.target.value)}
                   placeholder="What's happening?" 
@@ -48,7 +64,9 @@ const TweetBox = () => {
                 placeholder="Optional: Enter image URL" type="text"/>
 
                
-                <Button onClick={sendTweet} type="submit" className='tweetBox__tweet--button'>Tweet</Button>
+                <Button onClick={sendTweet} type="submit" className='tweetBox__tweet--button'>
+                    Tweet
+                </Button>
                 
             </form>
         </div>

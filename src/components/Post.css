@@ -41,4 +41,7 @@
     .post{
         width: 100%;
     }
+    .post__footer{
+        justify-content: space-evenly;
+    }
 }

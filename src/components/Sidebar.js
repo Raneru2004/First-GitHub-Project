@@ -16,6 +16,7 @@ import { Avatar } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 
+
 function Sidebar(){
     return (
         <div className="sidebar__wrapper">
@@ -32,6 +33,7 @@ function Sidebar(){
                 
 
                 <Button variant="outlined" className='sidebar__tweet' fullWidth>Tweet</Button>
+                
                 <Button className='sidebar__tweet--plus'><AddIcon/></Button>
             </div>
             <div className="sidebar__avatar--wrapper">
