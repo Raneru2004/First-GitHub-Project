@@ -1,8 +1,15 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers'
+import { configureStore } from '@reduxjs/toolkit';
+import PostReducer from './actions/postAction';
 
-const initialState={};
-const middleWare=[]
-const store= createStore(rootReducer, initialState, applyMiddleware(...middleWare));
-export default store;
+export default configureStore({
+    reducer:{
+        post: PostReducer,
+    }
+})
+
+// const initialState={};
+// const middleWare=[]
+// const store= createStore(rootReducer, initialState, applyMiddleware(...middleWare));
+// export default store;
